@@ -21,7 +21,7 @@ Como Rodar localmente
   ```cd StressTest```
 
   3. Criar a imagem docker:
-  ```docker build -t stress-test-commandd . ```
+  ```docker build -t stress-test-command . ```
 
 
 #### Para testar execute o comando abaixo:
