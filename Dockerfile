@@ -11,12 +11,12 @@ RUN go mod download
 COPY . .
 
 # Build
-RUN CGO_ENABLED=0 GOOS=linux go build -o stress-test-cli main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -o stress-test-command main.go
 
 FROM alpine:latest
 
 # Copy binary from builder
-COPY --from=builder /app/stress-test-cli /stress-test-cli
+COPY --from=builder /app/stress-test-command /stress-test-command
 
 # Run
-ENTRYPOINT ["/stress-test-cli"]
+ENTRYPOINT ["/stress-test-command"]

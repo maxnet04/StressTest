@@ -1,10 +1,6 @@
-/*
-Copyright © 2025 Isaac de Miranda Campos
-
-*/
 package main
 
-import "github.com/isaacmirandacampos/stress-test-cli/cmd"
+import "github.com/maxnet04/StressTest/cmd"
 
 func main() {
 	cmd.Execute()

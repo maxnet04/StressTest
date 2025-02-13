@@ -79,13 +79,13 @@ func performLoadTest(url string, requests, concurrency int) sync.Map {
 			res, err := makeRequest(&ctx, url)
 			if err != nil {
 				if errors.Is(ctx.Err(), context.DeadlineExceeded) {
-					summary(&statusCodes, statusTimeout)
+					updateSummary(&statusCodes, statusTimeout)
 				} else {
 					updateSummary(&statusCodes, statusTimeout)
 				}
 				return
 			}
-			summary(&statusCodes, res.StatusCode)
+			updateSummary(&statusCodes, res.StatusCode)
 		}()
 	}
 	wg.Wait()
@@ -119,7 +119,7 @@ func updateSummary(statusCodes *sync.Map, key int) {
 	statusCodes.Store(key, existingCount.(int32)+1)
 }
 
-func Execure() {
+func Execute() {
 	if err := cmd.Execute(); err != nil {
 		os.Exit(1)
 	}
