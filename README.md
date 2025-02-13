@@ -1,4 +1,4 @@
-# stress-test
+# Stress-Test
 
 Sistema CLI em Go para realizar testes de carga em um serviço web. O usuário deverá fornecer a URL do serviço, o número total de requests e a quantidade de chamadas simultâneas.
 
@@ -31,7 +31,7 @@ Como Rodar localmente
 ## Resultado agrupado por status code:
 
 Performing load test on http://google.com with 10 requests and 5 concurrent cells.
-==============================================
+
 Total execution time: 1.396605461s
 Total number of request made: 10
 
